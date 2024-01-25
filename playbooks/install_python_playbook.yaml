@@ -1,0 +1,16 @@
+---
+- name: Install Python3
+  hosts: all
+  tasks:
+
+    - name: Install Python3 on Ubuntu
+      apt:
+        name: python3
+        state: present
+      when: ansible_os_family == 'Debian'
+
+    - name: Install Python3 on CentOS
+      yum:
+        name: python3
+        state: present
+      when: ansible_os_family == 'RedHat'
