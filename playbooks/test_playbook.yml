@@ -1,0 +1,8 @@
+---
+- name: Jenkins teset
+  hosts: localhost
+  tasks:
+
+    - name: Test run ansible
+      debug:
+        msg: Test run ansible
